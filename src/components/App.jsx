@@ -1,20 +1,24 @@
 import { nanoid } from "nanoid";
 import Form from "./Form";
+import FormElementList from "./FormElementList";
+import { Component } from 'react';
 
+export class App extends Component {
+  state = {
+    contacts: [],
+  }
+  contactsState = (contact) => {
+    const newContact = {
+      ...contact,
+      id: nanoid(),
+    
+    }
+this.setState(prev => ({ contacts: [...prev.contacts, newContact],  }))
 
-
-export const App = () => {
-
-  //   createUser = (user) => {
-  // const newUser = {
-  //   ...user,
-  //   id: nanoid(),
-
-  // }
-//     this.setState(prev => ({ users: [...prev.users, newUser]}))
-// }
-
-  return (
+  }
+  render() {
+    console.log(this.state)
+return (
     <div
       style={{
         height: '100vh',
@@ -26,9 +30,19 @@ export const App = () => {
       }}
     >
      
-  <Form />
-
+    <Form contactsState={ 
+      this.contactsState
+    } />
+    <FormElementList
+      contacts={this.state.contacts } />
 
     </div>
   );
+
+   }
+  
+
+
+
+  
 };

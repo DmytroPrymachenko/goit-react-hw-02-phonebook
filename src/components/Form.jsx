@@ -10,7 +10,7 @@ export default class Form extends Component {
 } 
     onSubmitForm = (e) => {
         e.preventDefault();
-        
+         this.props.contactsState(this.state)
 }
     
     
@@ -23,7 +23,7 @@ export default class Form extends Component {
             <input onChange={this.onChangeState} id='name' name='name' type="text" value={name}/>
              <label htmlFor="phone">Phone</label>
             <input onChange={this.onChangeState} id='phone' name='namber' type="tel" value={namber} />
-            <button type='submit'></button>
+            <button type='submit'>BUTTON</button>
       </form>
     )
   }
