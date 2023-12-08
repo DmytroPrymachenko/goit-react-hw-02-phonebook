@@ -1,4 +1,19 @@
+import { nanoid } from "nanoid";
+import Form from "./Form";
+
+
+
 export const App = () => {
+
+  //   createUser = (user) => {
+  // const newUser = {
+  //   ...user,
+  //   id: nanoid(),
+
+  // }
+//     this.setState(prev => ({ users: [...prev.users, newUser]}))
+// }
+
   return (
     <div
       style={{
@@ -10,7 +25,10 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+     
+  <Form />
+
+
     </div>
   );
 };
