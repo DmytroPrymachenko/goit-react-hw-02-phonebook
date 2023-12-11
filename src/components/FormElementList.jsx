@@ -1,24 +1,30 @@
-import React, { Component } from 'react'
-import Element from './Element'
+import React, { Component } from 'react';
+
+import {
+  DeleteBtn,
+  ElementDiv,
+  ElementUl,
+} from './StylesJSX/FormElementListStyles';
+import { ElementsLi } from './StylesJSX/ElementStyles';
 
 export default class FormElementList extends Component {
-    render() {
-      const { contacts } = this.props;
-        
+  render() {
+    const { contacts } = this.props;
+
     return (
-      <div>
-  <ul>
-         {contacts.map((contact) => (
-            <Element key={contact.id} namber={contact.namber} name={contact.name} />
+      <ElementDiv>
+        <ElementUl>
+          {contacts.map(({ number, name, id }) => (
+            <ElementsLi key={id}>
+              <p>{number}</p>
+              <p>{name}</p>
+              <DeleteBtn onClick={() => this.props.onDelete(id)}>
+                Delate
+              </DeleteBtn>
+            </ElementsLi>
           ))}
-</ul>
-</div>
-    )
+        </ElementUl>
+      </ElementDiv>
+    );
   }
-}
-function fm1() {
-fm2(10)
-}
-function fm2(namber) {
-  
 }
