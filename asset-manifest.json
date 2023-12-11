@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DmytroPrymachenko/goit-react-hw-02-phonebook/static/css/main.7acaea2f.css",
+    "main.js": "/DmytroPrymachenko/goit-react-hw-02-phonebook/static/js/main.d0b9f3d3.js",
+    "index.html": "/DmytroPrymachenko/goit-react-hw-02-phonebook/index.html",
+    "main.7acaea2f.css.map": "/DmytroPrymachenko/goit-react-hw-02-phonebook/static/css/main.7acaea2f.css.map",
+    "main.d0b9f3d3.js.map": "/DmytroPrymachenko/goit-react-hw-02-phonebook/static/js/main.d0b9f3d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.d0b9f3d3.js"
+  ]
+}
